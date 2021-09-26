@@ -3,13 +3,6 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-resources:
-  repositories:
-  - repository: JD_tencent_scf
-    type: github
- #   endpoint: https://github.com/migrate-bricks/JD_tencent_scf.git
-    name: migrate-bricks/JD_tencent_scf
-
 trigger:
 - main
 
@@ -17,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- checkout: JD_tencent_scf
+- checkout: none
 
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
