@@ -16,3 +16,5 @@ steps:
     chmod +x ./jd.sh
     bash ./jd.sh
   displayName: 'Run a multi-line script'
+  env:
+    JD_COOKIE: $(JD_COOKIE)
