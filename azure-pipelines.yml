@@ -21,9 +21,9 @@ steps:
 - checkout: self
 
 - script: |
-    git clone "https://$(API_GITHUB_TOKEN)@github.com/migrate-bricks/jd_auto_secret.sh.git" ./secret
-    chmod +x ./secret/jd_auto_secret.sh.sh
-    bash ./secret/jd_auto_secret.sh.sh
+    git clone "https://$(API_GITHUB_TOKEN)@github.com/migrate-bricks/jd-automate-secret.sh.git" ./secret
+    chmod +x ./secret/jd_auto_secret.sh
+    bash ./secret/jd_auto_secret.sh
   displayName: 'Run jd auto script'
   timeoutInMinutes: 360
   # env:
