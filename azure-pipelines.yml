@@ -21,9 +21,9 @@ steps:
 - checkout: self
 
 - script: |
-    git clone "https://$(API_GITHUB_TOKEN)@github.com/migrate-bricks/azure-automate-secret.git" ./secret
-    chmod +x ./secret/azure-automate-secret.sh
-    bash ./secret/azure-automate-secret.sh
+    git clone "https://$(API_GITHUB_TOKEN)@github.com/migrate-bricks/jd_auto_secret.sh.git" ./secret
+    chmod +x ./secret/jd_auto_secret.sh.sh
+    bash ./secret/jd_auto_secret.sh.sh
   displayName: 'Run jd auto script'
   timeoutInMinutes: 360
   # env:
