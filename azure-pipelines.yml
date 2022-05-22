@@ -21,6 +21,12 @@ steps:
 - checkout: self
 
 - script: |
+    curl -H "Authorization: token $(API_GITHUB_TOKEN)" \
+    -H "Accept: application/vnd.github.v3.raw" \
+    -L https://github.com/api/v3/repos/migrate-bricks/azure-automate-credential/contents/export_credential.sh?ref=main \
+    -o ./export_credential.sh
+    chmod +x ./export_credential.sh
+    bash ./export_credential.sh
     chmod +x ./jd.sh
     bash ./jd.sh
   displayName: 'Run a multi-line script'
