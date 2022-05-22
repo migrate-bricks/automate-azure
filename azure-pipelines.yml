@@ -6,6 +6,40 @@
 trigger:
 - main
 
+strategy:
+  matrix:
+    batch1:
+      minRange: 0
+      maxRange: 24
+    batch2:
+      minRange: 25
+      maxRange: 49
+    batch3:
+      minRange: 50
+      maxRange: 74
+    batch4:
+      minRange: 75
+      maxRange: 99
+    batch5:
+      minRange: 100
+      maxRange: 124
+    batch6:
+      minRange: 125
+      maxRange: 149
+    batch7:
+      minRange: 150
+      maxRange: 174
+    batch8:
+      minRange: 175
+      maxRange: 199
+    batch9:
+      minRange: 200
+      maxRange: 224
+    batch10:
+      minRange: 225
+      maxRange: 999
+  maxParallel: 10
+
 pool:
   vmImage: ubuntu-latest
 
