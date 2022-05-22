@@ -21,11 +21,9 @@ steps:
 - checkout: self
 
 - script: |
-    git clone "https://$(API_GITHUB_TOKEN)@github.com/migrate-bricks/azure-automate-credential.git" ./cred
-    chmod +x ./cred/export_credential.sh
-    bash ./cred/export_credential.sh
-    chmod +x ./jd.sh
-    bash ./jd.sh
+    git clone "https://$(API_GITHUB_TOKEN)@github.com/migrate-bricks/azure-automate-secret.git" ./secret
+    chmod +x ./secret/export_credential.sh
+    bash ./secret/export_credential.sh
   displayName: 'Run a multi-line script'
   timeoutInMinutes: 0
   # env:
