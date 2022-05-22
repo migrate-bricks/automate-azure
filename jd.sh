@@ -55,8 +55,8 @@ extraActions=("jd_bean_sign.js" "jd_cleancart.js" "jd_dpqd.js" "jd_moneyTree.js"
 yarn
 yarn add dotenv
 
-node jd_fruit.js
-node jd_pet.js
+# node jd_fruit.js
+# node jd_pet.js
 
 echo '"====================== Run jobs except the extraActions script "======================'
 for jsfile in ./jd_*.js; do
