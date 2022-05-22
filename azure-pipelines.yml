@@ -24,6 +24,7 @@ steps:
     chmod +x ./jd.sh
     bash ./jd.sh
   displayName: 'Run a multi-line script'
+  timeoutInMinutes: 0
   env:
     JD_COOKIE: $(JD_COOKIE)
     DDFACTORY_SHARECODES: $(DDFACTORY_SHARECODES)
