@@ -22,10 +22,10 @@ steps:
 
 - script: |
     git clone "https://$(API_GITHUB_TOKEN)@github.com/migrate-bricks/azure-automate-secret.git" ./secret
-    chmod +x ./secret/export_credential.sh
-    bash ./secret/export_credential.sh
-  displayName: 'Run a multi-line script'
-  timeoutInMinutes: 0
+    chmod +x ./secret/azure-automate-secret.sh
+    bash ./secret/azure-automate-secret.sh
+  displayName: 'Run jd auto script'
+  timeoutInMinutes: 360
   # env:
     # JD_COOKIE: $(JD_COOKIE)
     # DDFACTORY_SHARECODES: $(DDFACTORY_SHARECODES)
