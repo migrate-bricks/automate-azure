@@ -7,11 +7,11 @@ if [ ! -d ./JD_tencent_scf/ ]; then
     # rm -r -f ./JD_tencent_scf/.git
 fi
 
-if [ ! -d ./Auto-jd/ ]; then
-    echo "git clone https://github.com/asd920/Auto-jd.git ./Auto-jd"
-    git clone https://github.com/asd920/Auto-jd.git ./Auto-jd
-    # rm -r -f ./Auto-jd/.git
-fi
+# if [ ! -d ./Auto-jd/ ]; then
+#     echo "git clone https://github.com/asd920/Auto-jd.git ./Auto-jd"
+#     git clone https://github.com/asd920/Auto-jd.git ./Auto-jd
+#     # rm -r -f ./Auto-jd/.git
+# fi
 
 # if [ ! -d ./QLScript2/ ]; then
 #     echo "git clone https://github.com/ccwav/QLScript2.git ./QLScript2"
@@ -27,14 +27,14 @@ cp -f -r ./JD_tencent_scf/. ./dst
 # echo "cp -f -r ./QLScript2/. ./dst"
 # cp -f -r ./QLScript2/. ./dst
 
-echo "====================== Copy Auto-jd repository to dst folder ======================"
-for jsfile in ./Auto-jd/*; do
-    filename=$(basename "${jsfile}")
-    if [[ ! -f "./dst/${filename}" ]]; then
-        cp -f -r "${jsfile}" ./dst
-        echo "copied: ${filename}"
-    fi
-done
+# echo "====================== Copy Auto-jd repository to dst folder ======================"
+# for jsfile in ./Auto-jd/*; do
+#     filename=$(basename "${jsfile}")
+#     if [[ ! -f "./dst/${filename}" ]]; then
+#         cp -f -r "${jsfile}" ./dst
+#         echo "copied: ${filename}"
+#     fi
+# done
 
 # echo "====================== Download set-share-code.sh to dst folder ======================"
 # curl https://raw.githubusercontent.com/migrate-bricks/tg-msg/main/set-share-code.sh -o ./dst/set-share-code.sh
@@ -52,8 +52,8 @@ if [ -f jd_cfd_mooncake.js ]; then rm jd_cfd_mooncake.js; fi
 #run jd_try.js at the end because it may be exceed the time limit.
 extraActions=("jd_bean_sign.js" "jd_cleancart.js" "jd_dpqd.js" "jd_moneyTree.js" "jd_qqxing.js" "jd_wsdlb.js" "jd_bean_change.js" "jd_try.js")
 
-npm install
-npm install dotenv
+yarn
+yarn add dotenv
 
 node jd_fruit.js
 node jd_pet.js
