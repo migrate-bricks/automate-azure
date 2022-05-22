@@ -9,6 +9,14 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+schedules:
+- cron: "0 */4 * * *"
+  displayName: Every 4 hour build
+  branches:
+    include:
+    - main
+  always: true
+
 steps:
 - checkout: self
 
