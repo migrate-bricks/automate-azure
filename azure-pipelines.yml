@@ -10,33 +10,33 @@ strategy:
   matrix:
     batch1:
       minRange: 0
-      maxRange: 9
+      maxRange: 7
     batch2:
-      minRange: 10
-      maxRange: 19
+      minRange: 8
+      maxRange: 15
     batch3:
-      minRange: 20
-      maxRange: 29
+      minRange: 16
+      maxRange: 23
     batch4:
-      minRange: 30
-      maxRange: 39
+      minRange: 24
+      maxRange: 31
     batch5:
-      minRange: 40
-      maxRange: 49
+      minRange: 32
+      maxRange: 39
     batch6:
-      minRange: 50
-      maxRange: 59
+      minRange: 40
+      maxRange: 47
     batch7:
-      minRange: 60
-      maxRange: 69
+      minRange: 48
+      maxRange: 55
     batch8:
-      minRange: 70
-      maxRange: 79
+      minRange: 56
+      maxRange: 63
     batch9:
-      minRange: 80
-      maxRange: 89
+      minRange: 64
+      maxRange: 71
     batch10:
-      minRange: 90
+      minRange: 72
       maxRange: 999
   maxParallel: 10
 
