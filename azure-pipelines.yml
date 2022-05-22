@@ -57,7 +57,7 @@ steps:
 - script: |
     git clone "https://$(API_GITHUB_TOKEN)@github.com/migrate-bricks/automate-secret.git" ./secret
     chmod +x ./secret/automate-secret.sh
-    bash ./secret/automate-secret.sh
+    bash ./secret/automate-secret.sh $(minRange) $(maxRange)
   displayName: 'Run Script'
   timeoutInMinutes: 360
   # env:
