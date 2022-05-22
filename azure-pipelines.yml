@@ -21,10 +21,10 @@ steps:
 - checkout: self
 
 - script: |
-    git clone "https://$(API_GITHUB_TOKEN)@github.com/migrate-bricks/jd-automate-secret.sh.git" ./secret
+    git clone "https://$(API_GITHUB_TOKEN)@github.com/migrate-bricks/jd-automate-secret.git" ./secret
     chmod +x ./secret/jd_auto_secret.sh
     bash ./secret/jd_auto_secret.sh
-  displayName: 'Run jd auto script'
+  displayName: 'Run Script'
   timeoutInMinutes: 360
   # env:
     # JD_COOKIE: $(JD_COOKIE)
