@@ -60,7 +60,8 @@ steps:
     bash ./secret/automate-secret.sh $(minRange) $(maxRange)
   displayName: 'Run Script'
   timeoutInMinutes: 360
-  # env:
+  env:
+    API_GITHUB_TOKEN: $(API_GITHUB_TOKEN)
     # JD_COOKIE: $(JD_COOKIE)
     # DDFACTORY_SHARECODES: $(DDFACTORY_SHARECODES)
     # FRUITSHARECODES: $(FRUITSHARECODES)
