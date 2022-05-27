@@ -9,35 +9,35 @@ trigger:
 strategy:
   matrix:
     batch1:
-      minRange: 0
-      maxRange: 7
+      index: 0
+      batch: 10
     batch2:
-      minRange: 8
-      maxRange: 15
+      index: 1
+      batch: 10
     batch3:
-      minRange: 16
-      maxRange: 23
+      index: 2
+      batch: 10
     batch4:
-      minRange: 24
-      maxRange: 31
+      index: 3
+      batch: 10
     batch5:
-      minRange: 32
-      maxRange: 39
+      index: 4
+      batch: 10
     batch6:
-      minRange: 40
-      maxRange: 47
+      index: 5
+      batch: 10
     batch7:
-      minRange: 48
-      maxRange: 55
+      index: 6
+      batch: 10
     batch8:
-      minRange: 56
-      maxRange: 63
+      index: 7
+      batch: 10
     batch9:
-      minRange: 64
-      maxRange: 71
+      index: 8
+      batch: 10
     batch10:
-      minRange: 72
-      maxRange: 999
+      index: 9
+      batch: 10
   maxParallel: 10
 
 pool:
