@@ -1,48 +1,8 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
 
 trigger:
 - main
-
-strategy:
-  matrix:
-    batch1:
-      index: 0
-      batch: 10
-    batch2:
-      index: 1
-      batch: 10
-    batch3:
-      index: 2
-      batch: 10
-    batch4:
-      index: 3
-      batch: 10
-    batch5:
-      index: 4
-      batch: 10
-    batch6:
-      index: 5
-      batch: 10
-    batch7:
-      index: 6
-      batch: 10
-    batch8:
-      index: 7
-      batch: 10
-    batch9:
-      index: 8
-      batch: 10
-    batch10:
-      index: 9
-      batch: 10
-  maxParallel: 10
-
 pool:
   vmImage: ubuntu-latest
-
 schedules:
 - cron: "0 */4 * * *"
   displayName: Every 4 hour build
@@ -50,33 +10,67 @@ schedules:
     include:
     - main
   always: true
-
-steps:
-- checkout: self
-
-- script: |
-    git clone "https://$(API_GITHUB_TOKEN)@github.com/migrate-bricks/automate-secret.git" ./secret
-    chmod +x ./secret/automate-secret.sh
-    bash ./secret/automate-secret.sh $(index) $(batch)
-  displayName: 'Run Script'
-  timeoutInMinutes: 3600
-  # env:
-    # JD_COOKIE: $(JD_COOKIE)
-    # DDFACTORY_SHARECODES: $(DDFACTORY_SHARECODES)
-    # FRUITSHARECODES: $(FRUITSHARECODES)
-    # JD_JOIN_ZLC: $(JD_JOIN_ZLC)
-    # JD_TRY: $(JD_TRY)
-    # JD_TRY_TITLEFILTERS: $(JD_TRY_TITLEFILTERS)
-    # JDHEALTH_SHARECODES: $(JDHEALTH_SHARECODES)
-    # JDSGMH_SHARECODES: $(JDSGMH_SHARECODES)
-    # NOTIFY_AUTOCHECKCK: $(NOTIFY_AUTOCHECKCK)
-    # NOTIFY_SKIP_LIST: $(NOTIFY_SKIP_LIST)
-    # PETSHARECODES: $(PETSHARECODES)
-    # PLANT_BEAN_SHARECODES: $(PLANT_BEAN_SHARECODES)
-    # PUSH_PLUS_TOKEN: $(PUSH_PLUS_TOKEN)
-    # WP_APP_TOKEN: $(WP_APP_TOKEN)
-    # WP_APP_TOKEN_ONE: $(WP_APP_TOKEN_ONE)
-    # WP_TOPICIDS: $(WP_TOPICIDS)
-    # JD_BEAN_SIGN_STOP_NOTIFY: $(JD_BEAN_SIGN_STOP_NOTIFY)
-    # PET_NOTIFY_CONTROL: $(PET_NOTIFY_CONTROL)
-    # FRUIT_NOTIFY_CONTROL: $(FRUIT_NOTIFY_CONTROL)
+jobs:
+- job: batch-job
+  timeoutInMinutes: 0
+  cancelTimeoutInMinutes: 5
+  strategy:
+    matrix:
+      batch1:
+        index: 0
+        batch: 10
+      batch2:
+        index: 1
+        batch: 10
+      batch3:
+        index: 2
+        batch: 10
+      batch4:
+        index: 3
+        batch: 10
+      batch5:
+        index: 4
+        batch: 10
+      batch6:
+        index: 5
+        batch: 10
+      batch7:
+        index: 6
+        batch: 10
+      batch8:
+        index: 7
+        batch: 10
+      batch9:
+        index: 8
+        batch: 10
+      batch10:
+        index: 9
+        batch: 10
+    maxParallel: 10
+  steps:
+  - checkout: self
+  - script: |
+      git clone "https://$(API_GITHUB_TOKEN)@github.com/migrate-bricks/automate-secret.git" ./secret
+      chmod +x ./secret/automate-secret.sh
+      bash ./secret/automate-secret.sh $(index) $(batch)
+    displayName: 'Run Script'
+    # env:
+      # JD_COOKIE: $(JD_COOKIE)
+      # DDFACTORY_SHARECODES: $(DDFACTORY_SHARECODES)
+      # FRUITSHARECODES: $(FRUITSHARECODES)
+      # JD_JOIN_ZLC: $(JD_JOIN_ZLC)
+      # JD_TRY: $(JD_TRY)
+      # JD_TRY_TITLEFILTERS: $(JD_TRY_TITLEFILTERS)
+      # JDHEALTH_SHARECODES: $(JDHEALTH_SHARECODES)
+      # JDSGMH_SHARECODES: $(JDSGMH_SHARECODES)
+      # NOTIFY_AUTOCHECKCK: $(NOTIFY_AUTOCHECKCK)
+      # NOTIFY_SKIP_LIST: $(NOTIFY_SKIP_LIST)
+      # PETSHARECODES: $(PETSHARECODES)
+      # PLANT_BEAN_SHARECODES: $(PLANT_BEAN_SHARECODES)
+      # PUSH_PLUS_TOKEN: $(PUSH_PLUS_TOKEN)
+      # WP_APP_TOKEN: $(WP_APP_TOKEN)
+      # WP_APP_TOKEN_ONE: $(WP_APP_TOKEN_ONE)
+      # WP_TOPICIDS: $(WP_TOPICIDS)
+      # JD_BEAN_SIGN_STOP_NOTIFY: $(JD_BEAN_SIGN_STOP_NOTIFY)
+      # PET_NOTIFY_CONTROL: $(PET_NOTIFY_CONTROL)
+      # FRUIT_NOTIFY_CONTROL: $(FRUIT_NOTIFY_CONTROL)
