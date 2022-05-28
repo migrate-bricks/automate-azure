@@ -46,7 +46,37 @@ jobs:
       batch10:
         index: 9
         batch: 10
-    maxParallel: 10
+      batch11:
+        index: 10
+        batch: 10
+      batch12:
+        index: 11
+        batch: 10
+      batch13:
+        index: 12
+        batch: 10
+      batch14:
+        index: 13
+        batch: 10
+      batch15:
+        index: 14
+        batch: 10
+      batch16:
+        index: 15
+        batch: 10
+      batch17:
+        index: 16
+        batch: 10
+      batch18:
+        index: 17
+        batch: 10
+      batch19:
+        index: 18
+        batch: 10
+      batch20:
+        index: 19
+        batch: 10
+    maxParallel: 20
   steps:
   - checkout: self
   - script: |
