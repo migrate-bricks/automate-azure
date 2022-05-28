@@ -18,64 +18,94 @@ jobs:
     matrix:
       batch1:
         index: 0
-        batch: 20
+        batch: 30
       batch2:
         index: 1
-        batch: 20
+        batch: 30
       batch3:
         index: 2
-        batch: 20
+        batch: 30
       batch4:
         index: 3
-        batch: 20
+        batch: 30
       batch5:
         index: 4
-        batch: 20
+        batch: 30
       batch6:
         index: 5
-        batch: 20
+        batch: 30
       batch7:
         index: 6
-        batch: 20
+        batch: 30
       batch8:
         index: 7
-        batch: 20
+        batch: 30
       batch9:
         index: 8
-        batch: 20
+        batch: 30
       batch10:
         index: 9
-        batch: 20
+        batch: 30
       batch11:
         index: 10
-        batch: 20
+        batch: 30
       batch12:
         index: 11
-        batch: 20
+        batch: 30
       batch13:
         index: 12
-        batch: 20
+        batch: 30
       batch14:
         index: 13
-        batch: 20
+        batch: 30
       batch15:
         index: 14
-        batch: 20
+        batch: 30
       batch16:
         index: 15
-        batch: 20
+        batch: 30
       batch17:
         index: 16
-        batch: 20
+        batch: 30
       batch18:
         index: 17
-        batch: 20
+        batch: 30
       batch19:
         index: 18
-        batch: 20
+        batch: 30
       batch20:
         index: 19
-        batch: 20
+        batch: 30
+      batch21:
+        index: 20
+        batch: 30
+      batch22:
+        index: 21
+        batch: 30
+      batch23:
+        index: 22
+        batch: 30
+      batch24:
+        index: 23
+        batch: 30
+      batch25:
+        index: 24
+        batch: 30
+      batch26:
+        index: 25
+        batch: 30
+      batch27:
+        index: 26
+        batch: 30
+      batch28:
+        index: 27
+        batch: 30
+      batch29:
+        index: 28
+        batch: 30
+      batch30:
+        index: 29
+        batch: 30
     maxParallel: 10
   steps:
   - checkout: self
