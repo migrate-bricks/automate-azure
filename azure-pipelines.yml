@@ -11,7 +11,7 @@ schedules:
     - main
   always: true
 jobs:
-- job: batch-job
+- job: batch_job
   timeoutInMinutes: 0
   cancelTimeoutInMinutes: 5
   strategy:
