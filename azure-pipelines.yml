@@ -63,7 +63,7 @@ jobs:
         batch: 20
       batch16:
         index: 15
-        batch: 10
+        batch: 20
       batch17:
         index: 16
         batch: 20
