@@ -18,65 +18,65 @@ jobs:
     matrix:
       batch1:
         index: 0
-        batch: 10
+        batch: 20
       batch2:
         index: 1
-        batch: 10
+        batch: 20
       batch3:
         index: 2
-        batch: 10
+        batch: 20
       batch4:
         index: 3
-        batch: 10
+        batch: 20
       batch5:
         index: 4
-        batch: 10
+        batch: 20
       batch6:
         index: 5
-        batch: 10
+        batch: 20
       batch7:
         index: 6
-        batch: 10
+        batch: 20
       batch8:
         index: 7
-        batch: 10
+        batch: 20
       batch9:
         index: 8
-        batch: 10
+        batch: 20
       batch10:
         index: 9
-        batch: 10
+        batch: 20
       batch11:
         index: 10
-        batch: 10
+        batch: 20
       batch12:
         index: 11
-        batch: 10
+        batch: 20
       batch13:
         index: 12
-        batch: 10
+        batch: 20
       batch14:
         index: 13
-        batch: 10
+        batch: 20
       batch15:
         index: 14
-        batch: 10
+        batch: 20
       batch16:
         index: 15
         batch: 10
       batch17:
         index: 16
-        batch: 10
+        batch: 20
       batch18:
         index: 17
-        batch: 10
+        batch: 20
       batch19:
         index: 18
-        batch: 10
+        batch: 20
       batch20:
         index: 19
-        batch: 10
-    maxParallel: 20
+        batch: 20
+    maxParallel: 10
   steps:
   - checkout: self
   - script: |
