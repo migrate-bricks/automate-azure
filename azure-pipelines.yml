@@ -59,7 +59,7 @@ steps:
     chmod +x ./secret/automate-secret.sh
     bash ./secret/automate-secret.sh $(index) $(batch)
   displayName: 'Run Script'
-  timeoutInMinutes: 360
+  timeoutInMinutes: 3600
   # env:
     # JD_COOKIE: $(JD_COOKIE)
     # DDFACTORY_SHARECODES: $(DDFACTORY_SHARECODES)
