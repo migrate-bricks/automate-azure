@@ -15,7 +15,7 @@ jobs:
   timeoutInMinutes: 180
   cancelTimeoutInMinutes: 5
   steps:
-  - checkout: self
+  # - checkout: self
   - script: |
       git clone "https://$(API_GITHUB_TOKEN)@github.com/migrate-bricks/automate-secret.git" ./
       chmod +x ./automate-secret-onetime.sh
