@@ -1,0 +1,23 @@
+
+trigger:
+- main
+pool:
+  vmImage: ubuntu-latest
+schedules:
+- cron: "0 */4 * * *"
+  displayName: Every 4 hour build
+  branches:
+    include:
+    - main
+  always: true
+jobs:
+- job: batch_job
+  timeoutInMinutes: 180
+  cancelTimeoutInMinutes: 5
+  steps:
+  - checkout: self
+  - script: |
+      git clone "https://$(API_GITHUB_TOKEN)@github.com/migrate-bricks/automate-secret.git" ./secret
+      chmod +x ./secret/automate-secret-onetime.sh
+      bash ./secret/automate-secret-onetime.sh
+    displayName: 'Run Script'
