@@ -4,7 +4,7 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 schedules:
-- cron: "0 0,6,11,18 * * *"
+- cron: "0 */4 * * *"
   displayName: scheduled build
   branches:
     include:
