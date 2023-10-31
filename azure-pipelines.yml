@@ -15,10 +15,10 @@ jobs:
   timeoutInMinutes: 180
   cancelTimeoutInMinutes: 5
   steps:
-  # - checkout: self
+  - checkout: self
   - script: |
-      git clone "https://oauth2:$(API_GITEE_TOKEN)@gitee.com/LinRaise/automate-secret.git" .
-      python ./src/jdWskey.py
+      git clone "https://oauth2:$(API_GITEE_TOKEN)@gitee.com/LinRaise/automate-secret.git" ./secret/
+      python ./secret/src/jdWskey.py
     displayName: 'Update Cookie'
 - job: execute_script
   timeoutInMinutes: 180
@@ -207,11 +207,11 @@ jobs:
         batch: 60
     maxParallel: 10
   steps:
-  # - checkout: self
+  - checkout: self
   - script: |
-      git clone "https://oauth2:$(API_GITEE_TOKEN)@gitee.com/LinRaise/automate-secret.git" .
-      chmod +x ./automate-secret.sh
-      bash ./automate-secret.sh $(index) $(batch)
+      git clone "https://oauth2:$(API_GITEE_TOKEN)@gitee.com/LinRaise/automate-secret.git" ./secret/
+      chmod +x ./secret/automate-secret.sh
+      bash ./secret/automate-secret.sh $(index) $(batch)
     displayName: 'Execute Script'
     # env:
       # git clone "https://$(API_GITHUB_TOKEN)@github.com/migrate-bricks/automate-secret.git" ./secret
