@@ -20,6 +20,8 @@ jobs:
       git clone "https://oauth2:$(API_GITEE_TOKEN)@gitee.com/LinRaise/automate-secret.git" ./secret/
       python ./secret/src/jdWskey.py
     displayName: 'Update Cookie'
+    env:
+      API_GITEE_TOKEN: $(API_GITEE_TOKEN)
 - job: execute_script
   timeoutInMinutes: 180
   cancelTimeoutInMinutes: 5
