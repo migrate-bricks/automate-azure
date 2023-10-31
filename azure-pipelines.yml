@@ -22,7 +22,8 @@ jobs:
     displayName: 'Update Cookie'
     env:
       API_GITEE_TOKEN: $(API_GITEE_TOKEN)
-- job: execute_script
+- job: execute
+  dependsOn: update_cookie
   timeoutInMinutes: 180
   cancelTimeoutInMinutes: 5
   strategy:
