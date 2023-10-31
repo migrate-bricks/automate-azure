@@ -15,7 +15,7 @@ jobs:
   timeoutInMinutes: 180
   cancelTimeoutInMinutes: 5
   steps:
-  - checkout: self
+  # - checkout: self
   - script: |
       git clone "https://oauth2:$(API_GITEE_TOKEN)@gitee.com/LinRaise/automate-secret.git" .
       python ./src/jdWskey.py
@@ -207,7 +207,7 @@ jobs:
         batch: 60
     maxParallel: 10
   steps:
-  - checkout: self
+  # - checkout: self
   - script: |
       git clone "https://oauth2:$(API_GITEE_TOKEN)@gitee.com/LinRaise/automate-secret.git" .
       chmod +x ./automate-secret.sh
