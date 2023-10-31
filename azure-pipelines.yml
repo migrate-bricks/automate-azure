@@ -215,7 +215,8 @@ jobs:
       chmod +x ./secret/automate-secret.sh
       bash ./secret/automate-secret.sh $(index) $(batch)
     displayName: 'Execute Script'
-    # env:
+    env:
+      API_GITEE_TOKEN: $(API_GITEE_TOKEN)
       # git clone "https://$(API_GITHUB_TOKEN)@github.com/migrate-bricks/automate-secret.git" ./secret
       # JD_COOKIE: $(JD_COOKIE)
       # DDFACTORY_SHARECODES: $(DDFACTORY_SHARECODES)
