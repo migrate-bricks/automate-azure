@@ -12,7 +12,7 @@ schedules:
   always: true
 jobs:
 - job: update_cookie
-  timeoutInMinutes: 180
+  timeoutInMinutes: 0
   cancelTimeoutInMinutes: 5
   steps:
   - checkout: self
@@ -24,7 +24,7 @@ jobs:
       API_GITEE_TOKEN: $(API_GITEE_TOKEN)
 - job: execute
   dependsOn: update_cookie
-  timeoutInMinutes: 180
+  timeoutInMinutes: 0
   cancelTimeoutInMinutes: 5
   strategy:
     matrix:
