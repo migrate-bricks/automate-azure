@@ -25,7 +25,7 @@ jobs:
       API_GITEE_TOKEN: $(API_GITEE_TOKEN)
       API_GITHUB_TOKEN: $(API_GITHUB_TOKEN)
 - job: execute
-  dependsOn: update_cookie
+  # dependsOn: update_cookie
   timeoutInMinutes: 0
   cancelTimeoutInMinutes: 5
   strategy:
