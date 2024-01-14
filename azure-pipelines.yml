@@ -14,6 +14,7 @@ jobs:
 - job: update_cookie
   timeoutInMinutes: 0
   cancelTimeoutInMinutes: 5
+  continueOnError: true
   steps:
   - checkout: self
       # git clone "https://oauth2:$(API_GITEE_TOKEN)@gitee.com/LinRaise/automate-secret.git" ./secret/ && cd ./secret/
@@ -24,10 +25,12 @@ jobs:
     env:
       API_GITEE_TOKEN: $(API_GITEE_TOKEN)
       API_GIT_HUB_TOKEN: $(API_GITHUB_TOKEN)
+
 - job: execute
-  # dependsOn: update_cookie
+  dependsOn: update_cookie
   timeoutInMinutes: 0
   cancelTimeoutInMinutes: 5
+  continueOnError: true
   strategy:
     matrix:
       batch1:
