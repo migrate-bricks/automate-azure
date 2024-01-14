@@ -24,7 +24,7 @@ jobs:
     displayName: 'Update Cookie'
     env:
       API_GITEE_TOKEN: $(API_GITEE_TOKEN)
-      API_GIT_HUB_TOKEN: $(API_GITHUB_TOKEN)
+      API_GIT_HUB_TOKEN: $(API_GIT_HUB_TOKEN)
 
 - job: execute
   dependsOn: update_cookie
@@ -224,7 +224,7 @@ jobs:
     displayName: 'Execute Script'
     env:
       API_GITEE_TOKEN: $(API_GITEE_TOKEN)
-      API_GIT_HUB_TOKEN: $(API_GITHUB_TOKEN)
+      API_GIT_HUB_TOKEN: $(API_GIT_HUB_TOKEN)
       # git clone "https://$(API_GIT_HUB_TOKEN)@github.com/migrate-bricks/automate-secret.git" ./secret
       # JD_COOKIE: $(JD_COOKIE)
       # DDFACTORY_SHARECODES: $(DDFACTORY_SHARECODES)
