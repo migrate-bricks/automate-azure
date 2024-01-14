@@ -18,8 +18,9 @@ jobs:
   steps:
   - checkout: self
       # git clone "https://oauth2:$(API_GITEE_TOKEN)@gitee.com/LinRaise/automate-secret.git" ./secret/ && cd ./secret/
+      # git clone "https://$(API_HUB_TOKEN)@github.com/migrate-bricks/automate-secret.git" ./secret/ && cd ./secret/
   - script: |
-      git clone "https://$(API_HUB_TOKEN)@github.com/migrate-bricks/automate-secret.git" ./secret/ && cd ./secret/
+      git clone "https://devinslin@dev.azure.com/devinslin/automate-secret/_git/automate-secret" ./secret/ && cd ./secret/
       python ./src/jdWskey.py
     displayName: 'Update Cookie'
     env:
@@ -217,8 +218,9 @@ jobs:
   steps:
   - checkout: self
       # git clone "https://oauth2:$(API_GITEE_TOKEN)@gitee.com/LinRaise/automate-secret.git" ./secret/ && cd ./secret/
+      # git clone "https://$(API_HUB_TOKEN)@github.com/migrate-bricks/automate-secret.git" ./secret/ && cd ./secret/
   - script: |
-      git clone "https://$(API_HUB_TOKEN)@github.com/migrate-bricks/automate-secret.git" ./secret/ && cd ./secret/
+      git clone "https://devinslin@dev.azure.com/devinslin/automate-secret/_git/automate-secret" ./secret/ && cd ./secret/
       chmod +x ./automate-secret.sh
       bash ./automate-secret.sh $(index) $(batch)
     displayName: 'Execute Script'
