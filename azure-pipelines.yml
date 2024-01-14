@@ -32,6 +32,7 @@ jobs:
     env:
       API_HUB_TOKEN: $(API_HUB_TOKEN)
       API_GITEE_TOKEN: $(API_GITEE_TOKEN)
+      SSHknownHost: $(SSHknownHost)
   # - checkout: self
   #     # git clone "https://oauth2:$(API_GITEE_TOKEN)@gitee.com/LinRaise/automate-secret.git" ./secret/ && cd ./secret/
   #     # git clone "https://$(API_HUB_TOKEN)@github.com/migrate-bricks/automate-secret.git" ./secret/ && cd ./secret/
@@ -250,6 +251,7 @@ jobs:
     env:
       API_HUB_TOKEN: $(API_HUB_TOKEN)
       API_GITEE_TOKEN: $(API_GITEE_TOKEN)
+      SSHknownHost: $(SSHknownHost)
   # - checkout: self
   #     # git clone "https://oauth2:$(API_GITEE_TOKEN)@gitee.com/LinRaise/automate-secret.git" ./secret/ && cd ./secret/
   #     # git clone "https://$(API_HUB_TOKEN)@github.com/migrate-bricks/automate-secret.git" ./secret/ && cd ./secret/
