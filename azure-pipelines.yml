@@ -5,13 +5,13 @@ pool:
   vmImage: ubuntu-latest
 schedules:
 - cron: "0 */4 * * *"
-  displayName: scheduled build
+  displayName: Scheduled Build
   branches:
     include:
     - main
   always: true
 jobs:
-- job: update_cookie
+- job: Update_Cookie
   timeoutInMinutes: 0
   cancelTimeoutInMinutes: 5
   continueOnError: true
@@ -22,7 +22,7 @@ jobs:
       knownHostsEntry: '$(SSHknownHost)'
       sshKeySecureFile: 'id_ed25519'
   - task: Bash@3
-    displayName: 'Clone Repository'
+    displayName: 'Update Cookies'
     inputs:
       targetType: inline
       script: |
@@ -46,7 +46,7 @@ jobs:
   #     API_GITEE_TOKEN: $(API_GITEE_TOKEN)
   #     # API_AZURE_DEVOPS_TOKEN: $(API_AZURE_DEVOPS_TOKEN)
 - job: execute
-  dependsOn: update_cookie
+  dependsOn: Update_Cookie
   timeoutInMinutes: 0
   cancelTimeoutInMinutes: 5
   continueOnError: true
@@ -240,7 +240,7 @@ jobs:
       knownHostsEntry: '$(SSHknownHost)'
       sshKeySecureFile: 'id_ed25519'
   - task: Bash@3
-    displayName: 'Clone Repository'
+    displayName: 'Automate Execution'
     inputs:
       targetType: inline
       script: |
