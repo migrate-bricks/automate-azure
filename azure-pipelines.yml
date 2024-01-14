@@ -45,7 +45,7 @@ jobs:
   #     API_HUB_TOKEN: $(API_HUB_TOKEN)
   #     API_GITEE_TOKEN: $(API_GITEE_TOKEN)
   #     # API_AZURE_DEVOPS_TOKEN: $(API_AZURE_DEVOPS_TOKEN)
-- job: execute
+- job: Automate_Execution
   dependsOn: Update_Cookie
   timeoutInMinutes: 0
   cancelTimeoutInMinutes: 5
